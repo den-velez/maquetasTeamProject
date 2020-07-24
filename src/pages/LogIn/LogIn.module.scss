@@ -1,0 +1,35 @@
+@import '/src/styles/variables';
+
+.LogIn {
+	margin: 0 auto;
+	width: 780px;
+	height: 1024px;
+	background-color: $colorbackground;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 130px 1fr 1fr;
+	grid-row-gap: 20px;
+	&__header {
+		height: 130px;
+	}
+	&__form {
+		width: 100%;
+		height: 580px;
+		display: flex;
+		justify-content: center;
+		background-color: #232323;
+	}
+	&__bannerTwo {
+		height: 280px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $colorFont;
+		font-size: 50px;
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

@@ -1,0 +1,77 @@
+@import '/src/styles/variables';
+
+.Landing {
+	margin: 0 auto;
+	width: 480px;
+	height: 800px;
+	background-color: $colorbanner;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 1fr 4fr 1fr;
+	justify-items: center;
+
+	&__banner {
+		width: 400px;
+		height: 500px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: $colorbanner;
+		p {
+			width: 300px;
+			text-align: center;
+			font-size: 20px;
+			font-weight: 100;
+			color: $colorFont;
+		}
+		figure {
+			width: 250px;
+			height: 250px;
+			background-color: red;
+			align-items: center;
+			img {
+				object-fit: contain;
+				width: 100%;
+				background-color: green;
+			}
+		}
+		button {
+			width: 340px;
+			height: 90px;
+			border: none;
+			font-size: 32px;
+			font-weight: 100;
+			border-radius: 10px;
+			cursor: pointer;
+			color: $colorFont;
+			background-color: $colorbtn;
+		}
+		button:hover {
+			border: 1px solid $colorbtn-border-hover;
+			font-style: italic;
+		}
+		button:active {
+			background-color: $colorbtn-active;
+			font-weight: 300;
+		}
+	}
+	&__btnsignin {
+		width: 340px;
+		height: 90px;
+		border: none;
+		border-radius: 10px;
+		font-size: 32px;
+		font-weight: 100;
+		cursor: pointer;
+		color: $colorFont;
+		background-color: $colorbtn;
+	}
+	&__btnsignin:hover {
+		border: 1px solid $colorbtn-border-hover;
+		font-style: italic;
+	}
+	&__btnsignin:active {
+		background-color: $colorbtn-active;
+		font-weight: 300;
+	}
+}

@@ -1,0 +1,12 @@
+@import '/src/styles/variables';
+
+.SignUpMobile {
+	margin: 0 auto;
+	width: 480px;
+	height: 800px;
+	background-color: $colorbanner;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 1fr 4fr 1fr;
+	justify-items: center;
+}

@@ -1,0 +1,22 @@
+$colorbackground: #121212;
+$colorbanner: #040404;
+$colorboxes: rgba(40, 40, 40, 0.4);
+$colorbtn: #050505;
+$colorbtn-hover: #333333;
+$colorbtn-border-hover: #fff;
+$colorbtn-active: #333333;
+$colorInputs: rgba(179, 179, 179, 0.3);
+$colorFont: #fff;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+figure {
+	margin: 0;
+	padding: 0;
+}

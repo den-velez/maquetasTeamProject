@@ -1,0 +1,57 @@
+@import '/src/styles/variables';
+
+.SignUp {
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	&__form {
+		padding: 10px;
+		width: 400px;
+		height: 500px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: $colorboxes;
+		h2 {
+			margin-top: 40px;
+			text-align: center;
+			font-weight: 300;
+			text-transform: uppercase;
+			color: $colorFont;
+		}
+		label {
+			margin-top: 40px;
+			color: $colorFont;
+		}
+		input {
+			width: 340px;
+			height: 50px;
+			padding-left: 10px;
+			border: none;
+			border-radius: 10px;
+			background-color: $colorInputs;
+		}
+	}
+	&__btnsignup {
+		margin: 0 auto;
+		width: 340px;
+		height: 90px;
+		display: block;
+		border: none;
+		border-radius: 10px;
+		font-size: 32px;
+		font-weight: 100;
+		cursor: pointer;
+		color: $colorFont;
+		background-color: $colorbtn;
+	}
+	&__btnsignup:hover {
+		border: 1px solid $colorbtn-border-hover;
+		font-style: italic;
+	}
+	&__btnsignup:active {
+		background-color: $colorbtn-active;
+		font-weight: 300;
+	}
+}
