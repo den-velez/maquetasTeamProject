@@ -11,6 +11,11 @@ a{
     color: #ffffff;
     text-decoration: none;
 }
+h2{
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
 
 .header{
     display: flex;
@@ -50,4 +55,34 @@ a{
     height: 530px;
     margin: 50px auto;
     background-color: #282828;
+    display: grid;
+    grid-template-rows: 2fr repeat(3, 1fr) ;
+    align-items: center;
+    justify-items: center;
+}
+.profile-image{
+    width: 140px;
+    height: 140px;
+    border-radius: 140px;
+    background-color: silver;
+}
+.profile-input{
+    width: 60%;
+}
+.profile-input input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(179, 179, 179, 0.3);
+    color: white;
+    margin-top: 10px;
+}
+.profile-button{
+    width: 40%;
+    height: 50px;
+    background-color: #050505;
+    border: none;
+    color: #b3b3b3;
+    font-size: 20px;
 }
