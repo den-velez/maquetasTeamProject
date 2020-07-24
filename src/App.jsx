@@ -10,7 +10,7 @@ import LogIn from './pages/LogIn/LogIn'
 export function App() {
 	return (
 		<div>
-			<LogIn />
+			<Landing />
 		</div>
 	)
 }

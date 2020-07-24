@@ -2,8 +2,8 @@
 
 .LogIn {
 	margin: 0 auto;
-	width: 780px;
-	height: 1024px;
+	max-width: 1200px;
+	height: 100vh;
 	background-color: $colorbackground;
 	display: grid;
 	grid-template-columns: 1fr;
@@ -30,6 +30,25 @@
 			object-fit: cover;
 			width: 100%;
 			height: 100%;
+		}
+	}
+}
+
+@media screen and (min-width: 780px) {
+	.LogIn {
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 130px 1fr;
+		grid-template-areas: 'arriba arriba' 'izq der';
+		&__header {
+			grid-area: arriba;
+		}
+		&__form {
+			grid-area: der;
+			width: 90%;
+			background-color: none;
+		}
+		&__bannerTwo {
+			grid-area: izq;
 		}
 	}
 }

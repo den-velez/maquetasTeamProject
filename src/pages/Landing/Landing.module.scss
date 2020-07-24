@@ -2,8 +2,8 @@
 
 .Landing {
 	margin: 0 auto;
-	width: 780px;
-	height: 1024px;
+	max-width: 1200px;
+	height: 100vh;
 	background-color: $colorbackground;
 	display: grid;
 	grid-template-rows: 130px 1fr 1fr;
@@ -37,7 +37,7 @@
 	}
 	&__bannerTwo {
 		grid-area: abajo;
-		height: 280px;
+		height: 230px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -46,7 +46,19 @@
 		img {
 			object-fit: cover;
 			width: 100%;
-			height: 100%;
+			height: 230px;
+		}
+	}
+}
+
+@media screen and (min-width: 780px) {
+	.Landing {
+		grid-template-columns: 50% 50%;
+		&__bannerTwo {
+			height: 150px;
+			img {
+				height: 150px;
+			}
 		}
 	}
 }
