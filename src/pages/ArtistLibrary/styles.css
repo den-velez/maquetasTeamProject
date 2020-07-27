@@ -11,6 +11,10 @@ a{
     color: #ffffff;
     text-decoration: none;
 }
+h2{
+    color: #ffffff;
+    font-size: 20px;
+}
 
 .header{
     display: flex;
@@ -57,11 +61,62 @@ a{
 .menu{
     grid-area: menu;
     background-color: #040404;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
-.artist-list{
+.menu-link{
+    margin: 20px 0;
+    font-weight: 600;
+    text-align: center;
+}
+.artist_list{
     grid-area: artist-list;
+    padding: 20px 50px;
 }
+.artist_list-container{
+    width: 100%;
+    margin-top: 15px;
+}
+.artist_list-container-item {
+    padding: 10px 1em;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: #363636;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .artist_list-container-title{
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+  }
+  .artist_list-container-title h3{
+    margin: 10px 0;
+    color: #ffffff;
+  }
+  
+  .artist_list-container-image {
+    background-color: gray;
+    height: 54px;
+    width: 54px;
+  }
+  .artist_list-container-description{
+      color: #9c9c9c
+  }
+
 .player{
     grid-area: player;
     background-color: #282828;
+}
+
+@media (max-width:480px){
+    .artist-main{
+        grid-template-areas:    "menu artist-list"
+                                "player player";
+    }
 }
