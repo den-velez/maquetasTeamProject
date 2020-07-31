@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: #121212;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+h2{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(40, 40, 40, 0.4);
+}
+.header-user{
+    margin-right: 10px;
+    background-color: #050505;
+    width: 226px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-user-avatar{
+    height: 50px;
+}
+.header-user-avatar img{
+    height: 50px;
+}
+.header-user-more{
+    height: 20px;
+    margin-right: 20px;
+}
+.header-user-more img{
+    height: 20px;
+}
+.artist-main{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 230px 1fr;
+    grid-template-areas:"menu artist-list";
+    margin-bottom: 125px;
+}
+.menu{
+    grid-area: menu;
+    background-color: #040404;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.menu-link{
+    margin: 20px 0;
+    font-weight: 600;
+    text-align: center;
+}
+.artist_list{
+    grid-area: artist-list;
+    padding: 20px 50px;
+    overflow-y: scroll;
+}
+.artist_list-container{
+    width: 100%;
+    margin-top: 15px;
+}
+.artist_list-container-item {
+    padding: 10px 1em;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: #363636;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .artist_list-container-title{
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+  }
+  .artist_list-container-title h3{
+    margin: 10px 0;
+    color: #ffffff;
+  }
+  
+  .artist_list-container-image {
+    background-color: gray;
+    height: 54px;
+    width: 54px;
+  }
+  .artist_list-container-description{
+      color: #9c9c9c
+  }
+
+.player{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 125px;
+    background-color: #282828;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "cover player empty";
+    align-content: center;
+}
+.player-cover{
+    grid-area: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.player-cover-image{
+    width: 70px;
+    height: 70px;
+    background-color: #c4c4c4;
+    margin: 0 10px 0 20px;
+}
+.player-cover-image img{
+    width: 70px;
+    height: 70px;
+}
+.player-cover-details{
+    color: #ffffff;
+}
+.player-cover-details p{
+    color: #b3b3b3;
+}
+.player-panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: player;
+}
+.player-panel-icon{
+    width: 32px;
+    height: 32px;
+}
+.player-panel-icon img{
+    width: 32px;
+}
+.player-panel-bar{
+    width: 80%;
+    height: 12px;
+    background-color: #535353;
+    border-radius: 12px;
+    margin-top: 12px;
+}
+
+@media (max-width:780px){
+    .artist-main{
+        grid-auto-columns: 240px 1fr;
+        grid-template-areas: "artist-list artist-list";
+    }
+    .menu{
+        display: none;
+    }
+    .player{
+        grid-template-areas: "cover player player";
+    }
+}
+@media (max-width: 480px){
+    .player-panel-icon, .player-panel-bar, .player-cover-image{
+        display: none;
+    }
+    .player{
+        height: 100px;
+        grid-template-areas: "cover cover player";
+    }
+    .player-cover{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .player-cover-details{
+        display: inherit;
+        flex-direction: row;
+        gap: 15px;
+    }
+    .player-panel{
+        align-items: flex-end;
+    }
+    .player-panel-icon:nth-child(3){
+        display: inline;
+    }
+}
